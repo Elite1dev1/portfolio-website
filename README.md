@@ -87,6 +87,22 @@ npm run build
 vercel deploy
 ```
 
+## Troubleshooting
+
+### Dependency Conflicts
+
+If you encounter dependency conflicts during installation or deployment, particularly with `date-fns` and `react-day-picker`, use one of these solutions:
+
+1. Use the version specified in package.json (date-fns ^3.6.0)
+2. Install dependencies with the `--legacy-peer-deps` flag:
+   ```bash
+   npm install --legacy-peer-deps
+   ```
+3. Or use the `--force` flag:
+   ```bash
+   npm install --force
+   ```
+
 ## License
 
 [MIT](LICENSE)
