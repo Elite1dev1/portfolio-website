@@ -142,7 +142,7 @@ export default function Projects() {
         image:
           "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&auto=format&fit=crop&q=60",
         tags: ["Next.js", "Tailwind CSS", "Framer Motion", "Vercel"],
-        liveUrl: "https://example.com/project4",
+        liveUrl: "https://portfolio-website-t0zt.onrender.com/",
         githubUrl: "https://github.com/Elite1dev1/portfolio-website",
       },
       {
