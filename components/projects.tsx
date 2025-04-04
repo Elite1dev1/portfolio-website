@@ -143,7 +143,7 @@ export default function Projects() {
           "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&auto=format&fit=crop&q=60",
         tags: ["Next.js", "Tailwind CSS", "Framer Motion", "Vercel"],
         liveUrl: "https://example.com/project4",
-        githubUrl: "https://github.com/Elite1dev1/project4",
+        githubUrl: "https://github.com/Elite1dev1/portfolio-website",
       },
       {
         title: "Threads",
@@ -158,9 +158,9 @@ export default function Projects() {
       {
         title: "Financial Analytics Dashboard",
         description:
-          "An analytics dashboard for crafted to capture users financial dat, savings, spending and investments.",
+          "An analytics dashboard for crafted to capture users financial data, savings, spending and investments.",
         image:
-          "https://images.unsplash.com/photo-1726066012751-2adfb5485977?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          "https://images.unsplash.com/photo-1658677414428-d0ae187034cc?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         tags: ["Rest API", "Tailwind", "Typescript", "Javascript"],
         liveUrl: "https://fintech-dashboard-r1v4.onrender.com/",
         githubUrl: "https://github.com/Elite1dev1/fintech-dashboar",
