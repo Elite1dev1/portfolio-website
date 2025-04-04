@@ -2,6 +2,6 @@ services:
   - type: web
     name: portfolio-website
     env: node
-    buildCommand: npm install && npm run build
-    startCommand: npm start
-    publishDirectory: .next
+    buildCommand: chmod +x render-build.sh && ./render-build.sh
+    startCommand: cd build && npm start
+    publishDirectory: build
