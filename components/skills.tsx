@@ -1,92 +1,49 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Card, CardContent } from "@/components/ui/card"
-import { Progress } from "@/components/ui/progress"
 
 export default function Skills() {
-  const skillCategories = [
-    {
-      title: "Frontend Technologies",
-      skills: [
-        { name: "React.js", level: 95 },
-        { name: "AngularJS", level: 85 },
-        { name: "Vue.js", level: 90 },
-        { name: "JavaScript/TypeScript", level: 95 },
-        { name: "HTML5/CSS3", level: 98 },
-      ],
-    },
-    {
-      title: "CSS Frameworks",
-      skills: [
-        { name: "Tailwind CSS", level: 95 },
-        { name: "Bootstrap", level: 90 },
-        { name: "Sass/SCSS", level: 85 },
-        { name: "Styled Components", level: 80 },
-      ],
-    },
-    {
-      title: "Tools & Platforms",
-      skills: [
-        { name: "Git/GitHub", level: 90 },
-        { name: "AWS", level: 75 },
-        { name: "Vercel", level: 85 },
-        { name: "Webpack/Vite", level: 80 },
-      ],
-    },
-    {
-      title: "Other Skills",
-      skills: [
-        { name: "Responsive Design", level: 95 },
-        { name: "Web Accessibility (WCAG)", level: 90 },
-        { name: "SEO Optimization", level: 85 },
-        { name: "Performance Optimization", level: 90 },
-      ],
-    },
+  const skills = [
+    { name: "Next.js", description: "SSR, SSG & API Routes" },
+    { name: "Node.js", description: "Backend & Serverless" },
+    { name: "TypeScript", description: "Type-safe Architecture" },
+    { name: "PostgreSQL/MongoDB", description: "Database Management" },
+    { name: "React", description: "Hooks & Performance" },
+    { name: "Tailwind CSS", description: "Design Systems" },
+    { name: "RESTful APIs", description: "Scalable Communication" },
+    { name: "Cloud & DevOps", description: "AWS & Vercel Deployment" },
   ]
 
   return (
-    <section id="skills" className="section-padding bg-secondary/20">
-      <div className="container mx-auto px-4">
+    <section id="skills" className="section-padding">
+      <div className="container mx-auto px-6 md:px-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="text-center max-w-3xl mx-auto mb-16"
+          className="text-center mb-12"
         >
-          <h2 className="section-title">My Skills</h2>
-          <p className="text-lg text-muted-foreground">
-            I've developed expertise in a wide range of frontend technologies and tools, allowing me to create
-            exceptional web experiences.
-          </p>
+          <h2 className="text-3xl font-bold">Technical Prowess</h2>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {skillCategories.map((category, categoryIndex) => (
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          {skills.map((skill, index) => (
             <motion.div
-              key={categoryIndex}
+              key={index}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: categoryIndex * 0.1 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
+              className="glass p-8 rounded-2xl flex flex-col items-center text-center group hover:border-primary/50 transition-all"
             >
-              <Card className="h-full border-primary/10 bg-background/50 backdrop-blur-sm">
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-bold mb-6 font-heading">{category.title}</h3>
-                  <div className="space-y-6">
-                    {category.skills.map((skill, skillIndex) => (
-                      <div key={skillIndex}>
-                        <div className="flex justify-between mb-2">
-                          <span className="font-medium">{skill.name}</span>
-                          <span className="text-muted-foreground">{skill.level}%</span>
-                        </div>
-                        <Progress value={skill.level} className="h-2" />
-                      </div>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
+              <div className="bg-primary/10 text-primary p-4 rounded-xl mb-4 group-hover:scale-110 transition-transform">
+                <svg className="w-6 h-6 md:w-8 md:h-8" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z"/>
+                </svg>
+              </div>
+              <h4 className="font-bold text-sm md:text-base">{skill.name}</h4>
+              <p className="text-xs text-slate-500 dark:text-slate-400 mt-2">{skill.description}</p>
             </motion.div>
           ))}
         </div>

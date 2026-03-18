@@ -58,13 +58,22 @@
   }
 }
 
+/* Glassmorphism effect */
+.glass {
+  background: rgba(24, 41, 52, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Hero gradient background */
+.hero-gradient {
+  background: radial-gradient(circle at top right, rgba(13, 147, 242, 0.15), transparent),
+              radial-gradient(circle at bottom left, rgba(13, 147, 242, 0.05), transparent);
+}
+
 .space-bg {
   background: linear-gradient(to bottom, #0f172a, #1e293b);
-  background-image: radial-gradient(white, rgba(255, 255, 255, 0.2) 2px, transparent 40px),
-    radial-gradient(white, rgba(255, 255, 255, 0.15) 1px, transparent 30px),
-    radial-gradient(white, rgba(255, 255, 255, 0.1) 2px, transparent 40px);
-  background-size: 550px 550px, 350px 350px, 250px 250px;
-  background-position: 0 0, 40px 60px, 130px 270px;
 }
 
 .section-padding {

@@ -9,71 +9,45 @@ export default function Footer() {
 
   const socialLinks = [
     {
-      name: "LinkedIn",
-      icon: <Linkedin className="h-5 w-5" />,
-      url: "https://www.linkedin.com/in/ikeoha-chiedozie-58baa8234/",
-    },
-    {
       name: "GitHub",
-      icon: <Github className="h-5 w-5" />,
       url: "https://github.com/Elite1dev1",
     },
     {
       name: "Twitter",
-      icon: <Twitter className="h-5 w-5" />,
       url: "https://x.com/heisthattallguy",
     },
     {
-      name: "CV",
-      icon: <FileText className="h-5 w-5" />,
-      url: "https://drive.google.com/file/d/1ZigNxPteRPNw3UpSCFMeeueYn-IQhqKk/view?usp=sharing", // google drive link to download cv
+      name: "LinkedIn",
+      url: "https://www.https://www.linkedin.com/in/ikeoha-chiedozie-58baa8234//in/ikeoha-chiedozie-58baa8234/",
     },
   ]
 
   return (
-    <footer className="bg-secondary/30 backdrop-blur-sm border-t border-primary/10 py-12">
-      <div className="container mx-auto px-4">
-        <div className="flex flex-col md:flex-row justify-between items-center">
-          <div className="mb-6 md:mb-0">
-            <Link href="#home" className="text-2xl font-bold font-heading">
-              Ikeoha Chiedozie
-            </Link>
-            <p className="text-muted-foreground mt-2">Frontend Developer based in Lagos, Nigeria</p>
+    <footer className="w-full border-t border-white/5 py-12">
+      <div className="container mx-auto px-6 md:px-10">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-6">
+          <div className="flex items-center gap-3">
+            <div className="bg-primary/20 p-1.5 rounded-lg flex items-center justify-center">
+              <svg className="w-4 h-4 text-primary" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+              </svg>
+            </div>
+            <span className="font-bold tracking-tight">Ikeoha Chiedozie</span>
           </div>
-
-          <div className="flex space-x-3">
+          <p className="text-slate-500 text-sm">© 2024 Ikeoha.dev. Handcrafted with passion and pixels.</p>
+          <div className="flex gap-6">
             {socialLinks.map((link, index) => (
-              <Button key={index} variant="outline" size="icon" asChild className="rounded-full">
-                <a href={link.url} target="_blank" rel="noopener noreferrer" aria-label={link.name}>
-                  {link.icon}
-                </a>
-              </Button>
+              <a
+                key={index}
+                className="text-slate-500 hover:text-primary transition-colors text-sm"
+                href={link.url}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {link.name}
+              </a>
             ))}
           </div>
-        </div>
-
-        <div className="border-t border-primary/10 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-sm text-muted-foreground mb-4 md:mb-0">
-            © {currentYear} Ikeoha Chiedozie. All rights reserved.
-          </p>
-
-          <nav className="flex flex-wrap gap-6">
-            <Link href="#home" className="text-sm hover:text-primary transition-colors">
-              Home
-            </Link>
-            <Link href="#about" className="text-sm hover:text-primary transition-colors">
-              About
-            </Link>
-            <Link href="#skills" className="text-sm hover:text-primary transition-colors">
-              Skills
-            </Link>
-            <Link href="#projects" className="text-sm hover:text-primary transition-colors">
-              Projects
-            </Link>
-            <Link href="#contact" className="text-sm hover:text-primary transition-colors">
-              Contact
-            </Link>
-          </nav>
         </div>
       </div>
     </footer>

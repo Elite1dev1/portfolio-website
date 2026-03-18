@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0d93f2",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#101b22",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<title>Thinco Learning Platform - Case Study</title>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased">
+<div class="relative flex h-auto min-h-screen w-full flex-col bg-background-light dark:bg-background-dark overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<!-- Navigation -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 dark:border-slate-800 px-6 md:px-20 py-4 sticky top-0 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md z-50">
+<div class="flex items-center gap-4">
+<div class="size-8 text-primary">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_6_319)">
+<path d="M8.57829 8.57829C5.52816 11.6284 3.451 15.5145 2.60947 19.7452C1.76794 23.9758 2.19984 28.361 3.85056 32.3462C5.50128 36.3314 8.29667 39.7376 11.8832 42.134C15.4698 44.5305 19.6865 45.8096 24 45.8096C28.3135 45.8096 32.5302 44.5305 36.1168 42.134C39.7033 39.7375 42.4987 36.3314 44.1494 32.3462C45.8002 28.361 46.2321 23.9758 45.3905 19.7452C44.549 15.5145 42.4718 11.6284 39.4217 8.57829L24 24L8.57829 8.57829Z" fill="currentColor"></path>
+</g>
+<defs>
+<clippath id="clip0_6_319"><rect fill="white" height="48" width="48"></rect></clippath>
+</defs>
+</svg>
+</div>
+<h2 class="text-slate-900 dark:text-white text-xl font-bold leading-tight tracking-tight">Portfolio</h2>
+</div>
+<div class="flex flex-1 justify-end gap-8 items-center">
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-slate-600 dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors" href="#">Work</a>
+<a class="text-slate-600 dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors" href="#">About</a>
+<a class="text-slate-600 dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors" href="#">Contact</a>
+</nav>
+<button class="flex min-w-[100px] cursor-pointer items-center justify-center rounded-lg h-10 px-5 bg-primary text-white text-sm font-bold leading-normal transition-transform active:scale-95">
+                    Hire Me
+                </button>
+</div>
+</header>
+<main class="flex flex-1 flex-col items-center">
+<div class="max-w-[1000px] w-full px-6 md:px-10 py-10">
+<!-- Hero Section -->
+<div class="@container mb-12">
+<div class="relative overflow-hidden rounded-xl h-[400px] md:h-[520px] bg-slate-800" data-alt="Modern online learning platform dashboard interface display" style='background-image: linear-gradient(180deg, rgba(16, 27, 34, 0) 0%, rgba(16, 27, 34, 0.9) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuC3A3puKbixhJdnljK0JpRTF8t822WTUrvVxvDp4M03RofY1QHdAc3TRPqlGlX-8fYEhgCDZzNlCeaAgbNR25hu0Lm5tyT_S92oDYSYUpVtYUgTR4ggtOz_TOmJHMtJA8FNGxcUbPxvIDWdoBawH0-g1ACEFy7_KrGyl4ZNkM6BsHkH6ZyjucPQIIbXzTV015QmjjPlpjvjw88TiSYOBs7zBVBYo9Yks7eDAdwhA7f5st_2VtHngh8NaKhkos1eUKLnV_pFst9FmvY"); background-size: cover; background-position: center;'>
+<div class="absolute bottom-0 left-0 p-8 md:p-12 w-full">
+<span class="inline-block px-3 py-1 rounded-full bg-primary/20 text-primary text-xs font-bold uppercase tracking-wider mb-4 border border-primary/30">EdTech Case Study</span>
+<h1 class="text-white text-4xl md:text-6xl font-black leading-tight tracking-tight">Thinco Learning Platform</h1>
+</div>
+</div>
+</div>
+<!-- Intro & Meta -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
+<div class="md:col-span-2">
+<p class="text-slate-900 dark:text-white text-2xl font-semibold leading-snug mb-6">
+                            A modern e-commerce and consultation platform designed to simplify haircare routines, connect users with experts, and deliver personalized product experiences.
+                        </p>
+<p class="text-slate-600 dark:text-slate-400 text-lg leading-relaxed">
+                            Thinco came to us with a vision to democratize specialized technical education. Over 12 months, we designed and developed a platform that now serves over 50,000 active students, providing a seamless transition from legacy manual systems to an automated, AI-driven learning environment.
+                        </p>
+</div>
+<div class="space-y-6 border-l border-slate-200 dark:border-slate-800 pl-8">
+<div>
+<p class="text-slate-500 dark:text-slate-500 text-sm font-bold uppercase tracking-widest mb-1">Timeline</p>
+<p class="text-slate-900 dark:text-slate-100 font-medium">Jan 2023 - Dec 2023</p>
+</div>
+<div>
+<p class="text-slate-500 dark:text-slate-500 text-sm font-bold uppercase tracking-widest mb-1">Role</p>
+<p class="text-slate-900 dark:text-slate-100 font-medium">Lead UI/UX Designer &amp; Full-stack Engineer</p>
+</div>
+<div>
+<p class="text-slate-500 dark:text-slate-500 text-sm font-bold uppercase tracking-widest mb-1">Stack</p>
+<p class="text-slate-900 dark:text-slate-100 font-medium">React, Tailwind CSS, Node.js, AWS</p>
+</div>
+</div>
+</div>
+<!-- Section: The Challenge -->
+<div class="mb-20">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-primary text-3xl">error</span>
+<h2 class="text-slate-900 dark:text-white text-3xl font-bold tracking-tight">The Challenge</h2>
+</div>
+<div class="bg-slate-100 dark:bg-slate-800/50 p-8 rounded-xl border border-slate-200 dark:border-slate-800">
+<p class="text-slate-700 dark:text-slate-300 text-lg leading-relaxed mb-6">
+                            The existing platform was built on outdated PHP infrastructure that struggled with scalability during peak enrollment periods. The user experience was fragmented, requiring students to navigate multiple disconnected portals for course materials, assessments, and community discussions.
+                        </p>
+<ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<li class="flex items-start gap-3 text-slate-600 dark:text-slate-400">
+<span class="material-symbols-outlined text-red-500 mt-1">close</span>
+<span>High bounce rate (45%) during the mobile checkout process.</span>
+</li>
+<li class="flex items-start gap-3 text-slate-600 dark:text-slate-400">
+<span class="material-symbols-outlined text-red-500 mt-1">close</span>
+<span>Inconsistent design system across web and tablet views.</span>
+</li>
+<li class="flex items-start gap-3 text-slate-600 dark:text-slate-400">
+<span class="material-symbols-outlined text-red-500 mt-1">close</span>
+<span>Generic e-commerce platforms offer no personalization.</span>
+</li>
+<li class="flex items-start gap-3 text-slate-600 dark:text-slate-400">
+<span class="material-symbols-outlined text-red-500 mt-1">close</span>
+<span>Slow page load times (&gt; 4s) impacting SEO rankings.</span>
+</li>
+</ul>
+</div>
+</div>
+<!-- Section: The Solution -->
+<div class="mb-20">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-primary text-3xl">lightbulb</span>
+<h2 class="text-slate-900 dark:text-white text-3xl font-bold tracking-tight">The Solution</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div>
+<p class="text-slate-700 dark:text-slate-300 text-lg leading-relaxed mb-6">
+                                We rebuilt the platform from the ground up using a modern technical stack to ensure future-proofing and high performance. The core focus was on a **Full-stack React Architecture** and a highly modular UI system.
+                            </p>
+<div class="space-y-6">
+<div class="flex gap-4">
+<div class="flex-shrink-0 size-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">code</span>
+</div>
+<div>
+<h4 class="font-bold text-slate-900 dark:text-white mb-1">React &amp; Tailwind CSS</h4>
+<p class="text-slate-600 dark:text-slate-400 text-sm">Implemented a custom-built utility-first design system for rapid UI iteration and consistent component behavior.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="flex-shrink-0 size-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">api</span>
+</div>
+<div>
+<h4 class="font-bold text-slate-900 dark:text-white mb-1">Headless CMS Integration</h4>
+<p class="text-slate-600 dark:text-slate-400 text-sm">Separated content from presentation, allowing educators to update curriculums in real-time without developer intervention.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="rounded-xl overflow-hidden bg-slate-900 border border-slate-800" data-alt="Technical architecture diagram showing React and Tailwind integration">
+<div class="aspect-video relative">
+<img alt="Code on screen" class="object-cover w-full h-full opacity-60" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCoSLfcUGiwReVJFGrCXt50e6OWYjD-tLvW0YRoD0wadU5RdFFQfbCIVQpIYEeM-GAiUbN3I2_GgM9Zpbd6MXRlEyRb5FGT2U4WHp76dFyPdFAXJZQ1Pwyq995LtI2VaXdwoir59qvAf1v8vh_uIBoPfn7EjsHoqpNqdNmxiMKBrOyvBtwyM09gh3a-vs-j1XqgOOb5NHQl452U5i9ns22l55Uch5EO2CEXLg9AeSdNfGcs63TYgPSJLLwN6jKgZBVijnsUgx9PCe0"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="bg-background-dark/80 backdrop-blur px-4 py-2 rounded-lg border border-primary/30">
+<code class="text-primary text-xs">npm install @thinco/design-system</code>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Section: Key Outcomes -->
+<div class="mb-20">
+<div class="flex items-center gap-3 mb-8">
+<span class="material-symbols-outlined text-emerald-500 text-3xl">trending_up</span>
+<h2 class="text-slate-900 dark:text-white text-3xl font-bold tracking-tight">Key Outcomes</h2>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<div class="bg-slate-100 dark:bg-slate-800/40 p-6 rounded-xl border border-slate-200 dark:border-slate-800 text-center">
+<p class="text-primary text-4xl font-black mb-2">140%</p>
+<p class="text-slate-900 dark:text-slate-100 font-bold text-sm uppercase">Growth</p>
+<p class="text-slate-500 dark:text-slate-500 text-xs mt-2">Increase in monthly active users (MAU)</p>
+</div>
+<div class="bg-slate-100 dark:bg-slate-800/40 p-6 rounded-xl border border-slate-200 dark:border-slate-800 text-center">
+<p class="text-primary text-4xl font-black mb-2">0.8s</p>
+<p class="text-slate-900 dark:text-slate-100 font-bold text-sm uppercase">Speed</p>
+<p class="text-slate-500 dark:text-slate-500 text-xs mt-2">Average page load time achieved</p>
+</div>
+<div class="bg-slate-100 dark:bg-slate-800/40 p-6 rounded-xl border border-slate-200 dark:border-slate-800 text-center">
+<p class="text-primary text-4xl font-black mb-2">-60%</p>
+<p class="text-slate-900 dark:text-slate-100 font-bold text-sm uppercase">Support</p>
+<p class="text-slate-500 dark:text-slate-500 text-xs mt-2">Reduction in UX-related support tickets</p>
+</div>
+<div class="bg-slate-100 dark:bg-slate-800/40 p-6 rounded-xl border border-slate-200 dark:border-slate-800 text-center">
+<p class="text-primary text-4xl font-black mb-2">4.9/5</p>
+<p class="text-slate-900 dark:text-slate-100 font-bold text-sm uppercase">Rating</p>
+<p class="text-slate-500 dark:text-slate-500 text-xs mt-2">Average user satisfaction score</p>
+</div>
+</div>
+</div>
+<!-- Footer Navigation -->
+<div class="border-t border-slate-200 dark:border-slate-800 pt-12 flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex flex-col gap-2 text-center md:text-left">
+<p class="text-slate-500 text-xs font-bold uppercase tracking-widest">Next Project</p>
+<h3 class="text-slate-900 dark:text-white text-2xl font-bold">Fintech Analytics Dashboard <span class="material-symbols-outlined align-middle ml-2 text-primary">arrow_forward</span></h3>
+</div>
+<button class="px-8 py-3 bg-slate-900 dark:bg-white text-white dark:text-slate-900 rounded-lg font-bold hover:opacity-90 transition-opacity">
+                        Back to Portfolio
+                    </button>
+</div>
+</div>
+</main>
+<footer class="mt-20 py-10 px-20 border-t border-slate-200 dark:border-slate-800 text-center">
+<p class="text-slate-500 dark:text-slate-400 text-sm">© 2024 Portfolio. Designed with care using Tailwind CSS.</p>
+</footer>
+</div>
+</div>
+</body></html>

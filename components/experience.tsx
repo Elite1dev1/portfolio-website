@@ -1,15 +1,12 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { CalendarDays, MapPin } from "lucide-react";
 
 export default function Experience() {
   const experiences = [
     {
       company: "THNCC",
-      position: "Senior Frontend Developer",
+      position: "Senior Full-stack Developer",
       period: "2024 - Present",
       location: "Remote",
       description: [
@@ -22,7 +19,7 @@ export default function Experience() {
     },
     {
       company: "Techworkstations",
-      position: "Frontend Developer",
+      position: "Full-stack Developer",
       period: "2023 - 2024",
       location: "Lagos, Nigeria",
       description: [
@@ -35,7 +32,7 @@ export default function Experience() {
     },
     {
       company: "Cloudspace Technologies",
-      position: "UI Developer",
+      position: "Full-stack Developer",
       period: "2023 - 2024",
       location: "Lagos, Nigeria",
       description: [
@@ -48,7 +45,7 @@ export default function Experience() {
     },
     {
       company: "Alive",
-      position: "Junior Frontend Developer",
+      position: "Junior Full-stack Developer",
       period: "2021 - 2022",
       location: "Lagos, Nigeria",
       description: [
@@ -62,65 +59,61 @@ export default function Experience() {
   ];
 
   return (
-    <section id="experience" className="section-padding bg-secondary/20">
-      <div className="container mx-auto px-4">
+    <section id="experience" className="section-padding">
+      <div className="container mx-auto px-6 md:px-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="text-center max-w-3xl mx-auto mb-16"
+          className="max-w-4xl mx-auto"
         >
-          <h2 className="section-title">Work Experience</h2>
-          <p className="text-lg text-muted-foreground">
-            My professional journey spans various roles in frontend development,
-            from junior positions to senior roles with leadership
-            responsibilities.
-          </p>
-        </motion.div>
+          <h2 className="text-3xl font-bold mb-12">Professional Journey</h2>
 
-        <div className="space-y-8">
-          {experiences.map((exp, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              viewport={{ once: true }}
-            >
-              <Card className="border-primary/10 bg-background/50 backdrop-blur-sm overflow-hidden">
-                <CardContent className="p-0">
-                  <div className="md:flex">
-                    <div className="md:w-1/3 p-6 bg-secondary/30">
-                      <h3 className="text-xl font-bold mb-2 font-heading">
-                        {exp.company}
-                      </h3>
-                      <Badge className="mb-4">{exp.position}</Badge>
-                      <div className="flex items-center text-sm text-muted-foreground mb-2">
-                        <CalendarDays className="mr-2 h-4 w-4" />
-                        {exp.period}
-                      </div>
-                      <div className="flex items-center text-sm text-muted-foreground">
-                        <MapPin className="mr-2 h-4 w-4" />
-                        {exp.location}
-                      </div>
-                    </div>
-                    <div className="md:w-2/3 p-6">
-                      <ul className="space-y-2">
-                        {exp.description.map((item, itemIndex) => (
-                          <li key={itemIndex} className="flex items-start">
-                            <span className="text-primary mr-2">•</span>
-                            <span>{item}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </motion.div>
-          ))}
-        </div>
+          <div className="space-y-12">
+            {experiences.map((exp, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="relative pl-10 border-l border-primary/20"
+              >
+                {/* Timeline Dot */}
+                <div className={`absolute w-4 h-4 rounded-full -left-[9px] top-1 ${
+                  index === 0 
+                    ? "bg-primary shadow-[0_0_10px_rgba(13,147,242,0.5)]" 
+                    : "bg-slate-700"
+                }`}></div>
+
+                {/* Period Badge */}
+                <div className="flex flex-col md:flex-row md:items-center justify-between mb-4 gap-2">
+                  <h3 className="text-xl font-bold">{exp.position}</h3>
+                  <span className={`text-sm font-semibold px-3 py-1 rounded-full ${
+                    index === 0
+                      ? "bg-primary/10 text-primary"
+                      : "bg-slate-800 text-slate-400"
+                  }`}>
+                    {exp.period}
+                  </span>
+                </div>
+
+                {/* Company Name */}
+                <p className="text-lg font-medium text-slate-700 dark:text-slate-300 mb-4">
+                  {exp.company}
+                </p>
+
+                {/* Description List */}
+                <ul className="space-y-3 text-slate-500 dark:text-slate-400 list-disc list-outside ml-4">
+                  {exp.description.map((item, itemIndex) => (
+                    <li key={itemIndex}>{item}</li>
+                  ))}
+                </ul>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
       </div>
     </section>
   );

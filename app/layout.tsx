@@ -18,9 +18,9 @@ const spaceGrotesk = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Ikeoha Chiedozie | Frontend Developer",
+  title: "Ikeoha Chiedozie | Full-stack Developer",
   description:
-    "Portfolio website of Ikeoha Chiedozie, a Frontend Developer with over 5 years of experience",
+    "Portfolio website of Ikeoha Chiedozie, a Full-stack Developer with over 5 years of experience",
   generator: "v0.dev",
 };
 

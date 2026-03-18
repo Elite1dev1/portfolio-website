@@ -11,7 +11,7 @@ import CursorTrail from "@/components/cursor-trail"
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-background text-foreground relative overflow-hidden">
+    <main className="min-h-screen bg-background text-foreground relative overflow-x-hidden">
       <CursorTrail />
       <Suspense fallback={<Loading />}>
         <Hero />
